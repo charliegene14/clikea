@@ -34,9 +34,6 @@ a {
   width: 100vw;
   height: 2rem;
   padding: 0.5rem;
-  /*&:hover .clikea-navigation-background-home{
-      opacity: 1;
-  }*/
 }
 .clikea-navigation-container .clikea-navigation-background {
   background-color: white;
