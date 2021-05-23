@@ -13,10 +13,9 @@ if (document.body.classList.contains('home')) {
     navContainer.classList.add('clikea-navigation-container-home');
 
     document.body.addEventListener('mousemove', e => {
+        clearTimeout();
         var background = document.getElementById('clikea-navigation-background');
         background.style.opacity = "1";
-
-       
-        setTimeout(mouseStop, 1500);
+        setTimeout(mouseStop, 3000);
     });
 }
