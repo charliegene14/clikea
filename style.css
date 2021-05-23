@@ -1,0 +1,13 @@
+/*
+Theme Name: Clikea
+Text Domain: clikea
+Version: 0.1
+Requires at least: 4.7
+Requires PHP: 7.4.2
+Description: A theme for a furnitures e-commerce website practicing.
+Tags:
+Author: DENIER Charlie-Gene
+Author URI: https://charlieishere.fr/
+*/
+
+@import 'assets/css/styles.css';

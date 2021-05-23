@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=KoHo&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "KoHo", sans-serif;
+  color: #201e25;
+}
+
+.content-area {
+  position: relative;
+  top: 4rem;
+  width: 100vw;
+}
+
+a {
+  color: #5d576b;
+  text-decoration: none;
+}
+
+.clikea-navigation-container .clikea-navigation-background-home, .clikea-navigation-container .clikea-navigation-background {
+  position: absolute;
+  top: -0.125rem;
+  left: -0.125rem;
+  width: 100vw;
+  height: 100%;
+}
+
+.clikea-navigation-container {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 2rem;
+  padding: 0.5rem;
+}
+.clikea-navigation-container .clikea-navigation-background {
+  background-color: white;
+  border-bottom: #ebb400 0.0625rem solid;
+}
+.clikea-navigation-container .clikea-navigation-background-home {
+  background-image: linear-gradient(0deg, rgba(0, 212, 255, 0) 10%, rgba(241, 222, 222, 0.5060223919) 30%, rgba(241, 222, 222, 0.662885137) 70%);
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.clikea-navigation-container:hover .clikea-navigation-background-home {
+  opacity: 1;
+}
+.clikea-navigation-container .clikea-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 1000;
+}
+.clikea-navigation-container .clikea-navigation .menu-navigation-gauche-container,
+.clikea-navigation-container .clikea-navigation .menu-navigation-droite-container {
+  display: flex;
+  flex-grow: 0.3;
+}
+.clikea-navigation-container .clikea-navigation .clikea-navigation-logo {
+  width: 4rem;
+}
+.clikea-navigation-container ul {
+  list-style: none;
+}
+.clikea-navigation-container a {
+  color: #201e25;
+  transition: color 200ms;
+}
+.clikea-navigation-container a:hover {
+  color: #ebb400;
+}
+.clikea-navigation-container .menu {
+  display: flex;
+  align-self: center;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.clikea-navigation-container-home a {
+  color: #201e25;
+}
+.clikea-navigation-container-home a:hover {
+  color: #201e25;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: url("/collection 2020.webp") no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center;
+}/*# sourceMappingURL=styles.css.map */

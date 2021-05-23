@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $koho-400;
+    color: $black;
+}
+
+.content-area {
+    position: relative;
+    top: $rem-64;
+
+    width: 100vw;
+} 
