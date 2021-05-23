@@ -19,5 +19,4 @@ if (document.body.classList.contains('home')) {
        
         setTimeout(mouseStop, 1500);
     });
-
 }
