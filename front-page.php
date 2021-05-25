@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="btn-home-collection" class="btn-home-collection"></div>
+<a id="btn-home-collection" class="btn-home-collection" href="/">Découvrez cette collection !</a>
 
 
 <script type="text/javascript" src="/wp-content/themes/clikea/assets/js/front-page.js"></script>

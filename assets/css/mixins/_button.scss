@@ -1,0 +1,18 @@
+@mixin button($width, $height, $back-color, $text-color){
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: $rem-4;
+
+    min-width: $rem-128;
+    min-height: $rem-32;
+
+    width: $width;
+    height: $height;
+
+    background: $back-color;
+    color: $text-color;
+
+}

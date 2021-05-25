@@ -2,23 +2,27 @@
    width: 100vw;
    height: 100vh;
    
-   background: url('/collection\ 2020.webp') no-repeat;
+   background: url('/collection\ 2021.webp') no-repeat;
    background-size: cover;
    background-position-y: bottom;
    background-position-x: center;
+
+   perspective: 1000px;
 }
 
-/*.btn-home-collection {
+.btn-home-collection {
+   @include button(20vw,10vh,linear-gradient(18deg, rgba(255,196,0,1) 0%, rgba(255,179,0,1) 30%, rgba(255,149,0,1) 100%),$black);
    z-index: 10000;
+   opacity: 0.6;
+
    position: relative;
    top: 50vh;
    left: 50vw;
+
    transform: translate(-50%, -50%);
+   transform-style: preserve-3d;
+   transition: opacity 300ms;
 
-   width: 25vw;
-   height: 15vh;
-
-   border-radius: $rem-4;
-   background-color: red;
-   opacity: 0.2;
-}*/
+   font-size: $rem-18;
+   box-shadow: $rem-8 $rem-8 $rem-16 rgba($black, 80%);
+}
