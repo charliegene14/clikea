@@ -11,6 +11,8 @@ if (document.body.classList.contains('home')) {
 
     document.body.addEventListener('mousemove', e => {
         let button = document.getElementById('btn-home-collection');
+        let buttonText = document.getElementById('btn-text');
+
         let background = document.getElementById('clikea-navigation-background');
 
         background.style.opacity = "1";
@@ -21,6 +23,7 @@ if (document.body.classList.contains('home')) {
         let yAxis = (window.innerHeight / 2 - e.pageY) /10;
 
         button.style.transform = `translate(-50%, -50%) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
+        buttonText.style.transform = "translateZ(15px)"
     });
 
     setInterval(function() {
@@ -30,7 +33,7 @@ if (document.body.classList.contains('home')) {
 
             background.style.opacity = "0";
             button.style.opacity = "0.6";
-            button.style.transform = "translate(-50%, -50%)"
+            button.style.transform = "translate(-50%, -50%) rotateY(0deg) rotateX(0deg)"
         }
         mouseStopIn -= 1;
         

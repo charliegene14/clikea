@@ -130,6 +130,6 @@ a {
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
   transition: opacity 300ms;
-  font-size: 1.125rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(32, 30, 37, 0.8);
+  text-align: center;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(32, 30, 37, 0.8);
 }/*# sourceMappingURL=styles.css.map */
