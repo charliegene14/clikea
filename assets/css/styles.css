@@ -12,57 +12,59 @@ main {
   width: 98vw;
 }
 
-.clikea-navigation-container .clikea-navigation-background-home, .clikea-navigation-container .clikea-navigation-background {
-  position: absolute;
-  top: -0.125rem;
-  left: -0.125rem;
+#clikea-wc-nav-container,
+#clikea-front-nav-container,
+#clikea-normal-container {
+  position: fixed;
+  z-index: 100;
   width: 100vw;
 }
-
-.clikea-navigation-container {
+#clikea-wc-nav-container .clikea-navigation-container,
+#clikea-front-nav-container .clikea-navigation-container,
+#clikea-normal-container .clikea-navigation-container {
   display: flex;
-  position: fixed;
-  z-index: 1000;
   width: 100vw;
   height: 2rem;
   padding: 0.5rem;
 }
-.clikea-navigation-container .clikea-navigation-background {
-  height: 100%;
-  background-color: white;
-  border-bottom: #ebb400 0.0625rem solid;
-}
-.clikea-navigation-container .clikea-navigation-background-home {
-  height: 100vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 90%);
-  opacity: 0;
-  transition: opacity 200ms;
-}
-.clikea-navigation-container .clikea-navigation {
+#clikea-wc-nav-container .clikea-navigation,
+#clikea-front-nav-container .clikea-navigation,
+#clikea-normal-container .clikea-navigation {
   display: flex;
   width: 100%;
   justify-content: center;
   font-size: 1.25rem;
   z-index: 1000;
 }
-.clikea-navigation-container .clikea-navigation .menu-navigation-gauche-container,
-.clikea-navigation-container .clikea-navigation .menu-navigation-droite-container {
+#clikea-wc-nav-container .clikea-navigation .menu-navigation-gauche-container,
+#clikea-wc-nav-container .clikea-navigation .menu-navigation-droite-container,
+#clikea-front-nav-container .clikea-navigation .menu-navigation-gauche-container,
+#clikea-front-nav-container .clikea-navigation .menu-navigation-droite-container,
+#clikea-normal-container .clikea-navigation .menu-navigation-gauche-container,
+#clikea-normal-container .clikea-navigation .menu-navigation-droite-container {
   display: flex;
   flex-grow: 0.3;
 }
-.clikea-navigation-container .clikea-navigation .clikea-navigation-logo {
+#clikea-wc-nav-container .clikea-navigation .clikea-navigation-logo,
+#clikea-front-nav-container .clikea-navigation .clikea-navigation-logo,
+#clikea-normal-container .clikea-navigation .clikea-navigation-logo {
   width: 4rem;
   position: fixed;
 }
-.clikea-navigation-container ul {
+#clikea-wc-nav-container ul,
+#clikea-front-nav-container ul,
+#clikea-normal-container ul {
   list-style: none;
 }
-.clikea-navigation-container a {
+#clikea-wc-nav-container a,
+#clikea-front-nav-container a,
+#clikea-normal-container a {
   color: #201e25;
   text-decoration: none;
-  transition: color 200ms;
 }
-.clikea-navigation-container a:hover {
+#clikea-wc-nav-container a:hover,
+#clikea-front-nav-container a:hover,
+#clikea-normal-container a:hover {
   background: linear-gradient(to right, #201e25 20%, #FF0 40%, #ebb400 60%, #201e25 80%);
   background-position-x: 100%;
   background-size: 600%;
@@ -82,23 +84,105 @@ main {
     background-position-x: 0%;
   }
 }
-.clikea-navigation-container .menu {
+#clikea-wc-nav-container .menu,
+#clikea-front-nav-container .menu,
+#clikea-normal-container .menu {
   display: flex;
   align-self: center;
   flex-grow: 1;
   justify-content: space-evenly;
 }
 
+/*
+.clikea-navigation-container {
+    display: flex;
+    width: 100vw;
+    height: $rem-32;
+    padding: $rem-8;
+
+    .clikea-navigation-background {
+        @extend %background-pos;
+        height: $rem-32;
+        background-color: white;
+        border-bottom: $secondary-color $rem-2 solid;
+    }
+
+    .clikea-navigation-background-home {
+        @extend %background-pos;
+        height: 100vh;
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.8) 90%);
+        opacity: 0;
+        transition: opacity 200ms;
+    }
+
+    .clikea-navigation {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: $rem-20;
+        z-index: 1000;
+
+        .menu-navigation-gauche-container,
+        .menu-navigation-droite-container {
+            display: flex;
+            flex-grow: 0.3;
+        }
+
+        .clikea-navigation-logo {
+            width: $rem-64;
+            position: fixed;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        @include link($black);
+
+        &:hover {
+
+            background: linear-gradient(to right, $black 20%, #FF0 40%, $secondary-color 60%, $black 80%);
+            background-position-x: 100%;
+            background-size: 600%;
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: gradient 0.325s linear;
+            @keyframes gradient {
+                to {
+                    background-position-x: 0%;
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-self: center;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+} */
 .home {
-  width: 100vw;
   height: 100vh;
   background: url("/collection 2021.webp") no-repeat;
   background-size: cover;
   background-position-y: bottom;
   background-position-x: center;
 }
-
-.btn-home-collection {
+.home #background-gradient {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 90%);
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.home .btn-home-collection {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +205,16 @@ main {
   text-decoration: none;
   box-shadow: 0.25rem 0.25rem 1rem rgba(32, 30, 37, 0.8);
 }
-.btn-home-collection #btn-text {
+.home .btn-home-collection #btn-text {
   font-size: 1.6vw;
+}
+
+#clikea-wc-nav-container {
+  position: fixed;
+  width: 100vw;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container {
+  width: 100%;
+  height: 4rem;
+  background: red;
 }/*# sourceMappingURL=styles.css.map */

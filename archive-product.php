@@ -3,7 +3,9 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+?>
 
+<?php
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -13,9 +15,6 @@ get_header();
  */
 
 do_action( 'woocommerce_before_main_content' );
-the_widget('WC_Widget_Product_Search', 'title=');
-
-do_action ('cart-navigation');
 
 ?>
 <header class="woocommerce-products-header">

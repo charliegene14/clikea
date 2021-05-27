@@ -5,19 +5,85 @@
     width: 100vw;
 }
 
+#clikea-wc-nav-container,
+#clikea-front-nav-container,
+#clikea-normal-container {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+
+    .clikea-navigation-container {
+        display: flex;
+        width: 100vw;
+        height: $rem-32;
+        padding: $rem-8;
+    }
+
+    .clikea-navigation {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: $rem-20;
+        z-index: 1000;
+
+        .menu-navigation-gauche-container,
+        .menu-navigation-droite-container {
+            display: flex;
+            flex-grow: 0.3;
+        }
+
+        .clikea-navigation-logo {
+            width: $rem-64;
+            position: fixed;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        @include link($black);
+
+        &:hover {
+
+            background: linear-gradient(to right, $black 20%, #FF0 40%, $secondary-color 60%, $black 80%);
+            background-position-x: 100%;
+            background-size: 600%;
+            
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+  
+            animation: gradient 0.325s linear;
+            @keyframes gradient {
+                to {
+                    background-position-x: 0%;
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-self: center;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+}
+
+/*
 .clikea-navigation-container {
     display: flex;
-    position: fixed;
-    z-index: 1000;
     width: 100vw;
     height: $rem-32;
     padding: $rem-8;
 
     .clikea-navigation-background {
         @extend %background-pos;
-        height: 100%;
+        height: $rem-32;
         background-color: white;
-        border-bottom: $secondary-color $rem-1 solid;
+        border-bottom: $secondary-color $rem-2 solid;
     }
 
     .clikea-navigation-background-home {
@@ -53,7 +119,6 @@
 
     a {
         @include link($black);
-        transition: color 200ms;
 
         &:hover {
 
@@ -80,4 +145,4 @@
         flex-grow: 1;
         justify-content: space-evenly;
     }
-}
+} */

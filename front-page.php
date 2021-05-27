@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<div id="background-gradient"></div>
 <a id="btn-home-collection" class="btn-home-collection" href="/"><span id="btn-text">Découvrez cette collection !</span></a>
 
 
