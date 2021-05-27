@@ -58,6 +58,7 @@ a {
 }
 .clikea-navigation-container .clikea-navigation .clikea-navigation-logo {
   width: 4rem;
+  position: fixed;
 }
 .clikea-navigation-container ul {
   list-style: none;
@@ -131,4 +132,7 @@ a {
   transition: opacity 300ms;
   text-align: center;
   box-shadow: 0.25rem 0.25rem 1rem rgba(32, 30, 37, 0.8);
+}
+.btn-home-collection #btn-text {
+  font-size: 2vw;
 }/*# sourceMappingURL=styles.css.map */

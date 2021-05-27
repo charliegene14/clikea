@@ -18,3 +18,12 @@ function clikea_register_styles() {
     wp_register_style   ('clikea',  '/wp-content/themes/clikea/style.css');
     wp_enqueue_style    ('clikea');
 }
+
+/**
+ * Allowing WebP images uploads
+ */
+function webp_upload_mimes($existing_mimes) {
+
+    $existing_mimes['webp'] = 'image/webp';
+    return $existing_mimes;
+}
