@@ -13,3 +13,12 @@ function clikea_cart_navigation() {
 
     <?php
 }
+
+function badge_new_product() {
+    global $product;
+    $newness_days = 30;
+    $created = strtotime( $product->get_date_created() );
+    if ( ( time() - ( 60 * 60 * 24 * $newness_days ) ) < $created ) {
+       echo '<span class="new-product">' . esc_html__( 'New!', 'woocommerce' ) . '</span>';
+    }
+}

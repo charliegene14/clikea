@@ -52,33 +52,15 @@
     }
 
     a {
-        color: $black;
+        @include link($black);
         transition: color 200ms;
-
-        &:hover {
-            color: $secondary-color;
-        }
-    }
-
-    .menu {
-        display: flex;
-        align-self: center;
-        flex-grow: 1;
-        justify-content: space-evenly;
-    }
-}
-
-.clikea-navigation-container-home {
-    a {
-        color: $black;
 
         &:hover {
 
             background: linear-gradient(to right, $black 20%, #FF0 40%, $secondary-color 60%, $black 80%);
             background-position-x: 100%;
             background-size: 600%;
-            color: $black;
-
+            
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -90,5 +72,12 @@
                 }
             }
         }
+    }
+
+    .menu {
+        display: flex;
+        align-self: center;
+        flex-grow: 1;
+        justify-content: space-evenly;
     }
 }

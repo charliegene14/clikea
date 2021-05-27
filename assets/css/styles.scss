@@ -2,11 +2,11 @@
             'var/fonts',
             'var/colors';
 
-@import     'mixins/button';
+@import     'mixins/button',
+            'mixins/link';
 
 
-@import     'elements/all',
-            'elements/links';
+@import     'class/all';
 
 @import     'templates/wp-header',
             'templates/front-page';

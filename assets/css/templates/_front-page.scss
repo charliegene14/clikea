@@ -12,6 +12,7 @@
 
    .btn-home-collection {
       @include button(20vw,10vh,linear-gradient(18deg, rgba(255,196,0,1) 0%, rgba(255,179,0,1) 30%, rgba(255,149,0,1) 100%),$black);
+
       z-index: 10000;
       opacity: 0.6;
 
@@ -24,10 +25,11 @@
       transition: opacity 300ms;
 
       text-align: center;
+      text-decoration: none;
       box-shadow: $rem-4 $rem-4 $rem-16 rgba($black, 80%);
 
       #btn-text {
-         font-size: 2vw;
+         font-size: 1.6vw;
       }
 
    }
