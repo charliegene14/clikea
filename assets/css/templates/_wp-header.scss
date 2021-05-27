@@ -1,148 +1,27 @@
-%background-pos {
-    position: absolute;
-    top: -$rem-2;
-    left: -$rem-2;
-    width: 100vw;
-}
-
-#clikea-wc-nav-container,
-#clikea-front-nav-container,
-#clikea-normal-container {
+%base {
     position: fixed;
     z-index: 100;
     width: 100vw;
+    @import 'main-navigation';
+}
 
+%nofront-main-bg {
     .clikea-navigation-container {
-        display: flex;
-        width: 100vw;
-        height: $rem-32;
-        padding: $rem-8;
-    }
-
-    .clikea-navigation {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        font-size: $rem-20;
-        z-index: 1000;
-
-        .menu-navigation-gauche-container,
-        .menu-navigation-droite-container {
-            display: flex;
-            flex-grow: 0.3;
-        }
-
-        .clikea-navigation-logo {
-            width: $rem-64;
-            position: fixed;
-        }
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    a {
-        @include link($black);
-
-        &:hover {
-
-            background: linear-gradient(to right, $black 20%, #FF0 40%, $secondary-color 60%, $black 80%);
-            background-position-x: 100%;
-            background-size: 600%;
-            
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-  
-            animation: gradient 0.325s linear;
-            @keyframes gradient {
-                to {
-                    background-position-x: 0%;
-                }
-            }
-        }
-    }
-
-    .menu {
-        display: flex;
-        align-self: center;
-        flex-grow: 1;
-        justify-content: space-evenly;
+        background: white;
+        border-bottom: $rem-2 solid $secondary-color;
     }
 }
 
-/*
-.clikea-navigation-container {
-    display: flex;
-    width: 100vw;
-    height: $rem-32;
-    padding: $rem-8;
+#clikea-front-nav-container {
+    @extend %base;
+}
 
-    .clikea-navigation-background {
-        @extend %background-pos;
-        height: $rem-32;
-        background-color: white;
-        border-bottom: $secondary-color $rem-2 solid;
-    }
+#clikea-wc-nav-container {
+    @extend %base;
+    @extend %nofront-main-bg;
+}
 
-    .clikea-navigation-background-home {
-        @extend %background-pos;
-        height: 100vh;
-        background-image: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.8) 90%);
-        opacity: 0;
-        transition: opacity 200ms;
-    }
-    
-    .clikea-navigation {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        font-size: $rem-20;
-        z-index: 1000;
-
-        .menu-navigation-gauche-container,
-        .menu-navigation-droite-container {
-            display: flex;
-            flex-grow: 0.3;
-        }
-
-        .clikea-navigation-logo {
-            width: $rem-64;
-            position: fixed;
-        }
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    a {
-        @include link($black);
-
-        &:hover {
-
-            background: linear-gradient(to right, $black 20%, #FF0 40%, $secondary-color 60%, $black 80%);
-            background-position-x: 100%;
-            background-size: 600%;
-            
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-  
-            animation: gradient 0.325s linear;
-            @keyframes gradient {
-                to {
-                    background-position-x: 0%;
-                }
-            }
-        }
-    }
-
-    .menu {
-        display: flex;
-        align-self: center;
-        flex-grow: 1;
-        justify-content: space-evenly;
-    }
-} */
+#clikea-normal-nav-container {
+    @extend %base;
+    @extend %nofront-main-bg;
+} 

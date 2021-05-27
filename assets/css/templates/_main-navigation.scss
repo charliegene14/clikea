@@ -1,0 +1,59 @@
+.clikea-navigation-container {
+
+    display: flex;
+    width: 100vw;
+    height: $rem-32;
+    padding: $rem-8;
+    z-index: 1000;
+
+    .clikea-navigation {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: $rem-20;
+
+        .menu-navigation-gauche-container,
+        .menu-navigation-droite-container {
+            display: flex;
+            flex-grow: 0.3;
+        }
+
+        .clikea-navigation-logo {
+            width: $rem-64;
+            position: fixed;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        @include link($black);
+
+        &:hover {
+
+            background: linear-gradient(to right, $black 20%, lighten($secondary-color, 40%) 40%, $secondary-color 60%, $black 80%);
+            background-position-x: 100%;
+            background-size: 600%;
+            
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: gradient 0.325s linear;
+            @keyframes gradient {
+                to {
+                    background-position-x: 0%;
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-self: center;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+}
