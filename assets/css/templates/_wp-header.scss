@@ -3,7 +3,6 @@
     top: -$rem-2;
     left: -$rem-2;
     width: 100vw;
-    
 }
 
 .clikea-navigation-container {
@@ -35,8 +34,7 @@
         justify-content: center;
         font-size: $rem-20;
         z-index: 1000;
-        
-        
+
         .menu-navigation-gauche-container,
         .menu-navigation-droite-container {
             display: flex;

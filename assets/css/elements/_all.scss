@@ -7,7 +7,11 @@
 }
 
 main {
-    position: relative;
+    position: absolute;
     top: $rem-64;
     width: 100vw;
-} 
+}
+
+#wpadminbar {
+    //margin-top: -$rem-32;
+}

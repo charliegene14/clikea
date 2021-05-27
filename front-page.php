@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <a id="btn-home-collection" class="btn-home-collection" href="/"><span id="btn-text">Découvrez cette collection !</span></a>
 
 

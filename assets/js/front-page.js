@@ -23,7 +23,7 @@ if (document.body.classList.contains('home')) {
         let yAxis = (window.innerHeight / 2 - e.pageY) /10;
 
         button.style.transform = `translate(-50%, -50%) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
-        buttonText.style.transform = "translateZ(15px)"
+        buttonText.style.transform = "translateZ(20px)"
     });
 
     setInterval(function() {
