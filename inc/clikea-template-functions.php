@@ -76,8 +76,7 @@ function clikea_nav_wrap_end(){
 
 /**
  * Cart Toggle
- * Appears on cart image click.
-*/
+ * Appears on cart image click.*/
 function clikea_cart_navigation() {
     ?>
 

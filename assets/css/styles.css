@@ -80,6 +80,12 @@ main {
   border-bottom: 0.125rem solid #ebb400;
 }
 
+#clikea-wc-nav-container #clikea-shop-navigation-container {
+  width: 100%;
+  height: 4rem;
+  background: red;
+}
+
 .home {
   height: 100vh;
   background: url("/collection 2021.webp") no-repeat;

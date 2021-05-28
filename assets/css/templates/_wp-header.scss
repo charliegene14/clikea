@@ -19,6 +19,8 @@
 #clikea-wc-nav-container {
     @extend %base;
     @extend %nofront-main-bg;
+
+    @import 'shop-navigation';
 }
 
 #clikea-normal-nav-container {
