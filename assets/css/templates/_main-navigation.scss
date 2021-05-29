@@ -1,17 +1,18 @@
-.clikea-navigation-container {
+#clikea-main-navigation-container {
 
+    position: relative;
     display: flex;
     width: 100vw;
     height: $rem-32;
     padding: $rem-8;
-    z-index: 1000;
+    z-index: 100;
 
     .clikea-navigation {
         display: flex;
         width: 100%;
         justify-content: center;
         font-size: $rem-20;
-
+    
         .menu-navigation-gauche-container,
         .menu-navigation-droite-container {
             display: flex;
@@ -20,7 +21,6 @@
 
         .clikea-navigation-logo {
             width: $rem-64;
-            position: fixed;
         }
     }
 

@@ -1,5 +1,60 @@
 #clikea-shop-navigation-container {
-        width: 100%;
+        display: flex;
+        position: relative;
+        width: 100vw;
         height: $rem-64;
-        background: red;
+
+        background: whitesmoke;
+        animation: appears 1.5s ease-out;
+        @keyframes appears {
+                from {
+                        top: -$rem-128;
+                }
+                to {
+                        top: 0;
+                }
+        }
+
+        a { @include link($black); }
+        ul { list-style-type: none; }
+
+        .sub-menu { display: none; font-size: $rem-16; line-height: $rem-24;}
+
+        #clikea-shop-menu-container {
+                .menu-boutique-container {
+                        display: flex;
+                        width: 50vw;
+                        height: 100%;
+                        padding: $rem-8;
+
+                        align-items: flex-end;
+
+                        .menu {
+                                display: flex;
+                                width: 100%;
+                                
+                                font-size: $rem-28;
+                                justify-content: space-evenly;
+
+                                > .menu-item-has-children {
+                                        > .sub-menu {
+                                                position: absolute;
+                                                width: 100vw;
+                                                height: $rem-256;
+                                                left: 0;
+                                                
+                                                background-color: whitesmoke;
+                                        }
+
+                                        &:hover > .sub-menu {
+                                                display: block;
+                                        }
+                                }
+
+                                /*.menu-item-has-children a:hover + .sub-menu {
+                                        display: block;
+                                }*/
+                        }
+                }
+        }
 }
