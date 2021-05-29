@@ -4,8 +4,9 @@ var menuItem = document.querySelectorAll('#clikea-shop-navigation-container .men
 
 menuItem.forEach(item => item.addEventListener('mouseover', e => {
 
-    item.parentNode.parentNode.querySelectorAll('li').forEach(li => li.classList.remove('active'))
- 
-    e.path[1].classList.add('active');
+    item.parentNode.parentNode.querySelectorAll('li').forEach(li => li.classList.remove('active'));
 
+    //Path for Chrome OR composedPath for Firefox
+    var path = e.path ? e.path : e.composedPath();
+    path[1].classList.add('active');
 }));
