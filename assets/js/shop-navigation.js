@@ -9,4 +9,6 @@ menuItem.forEach(item => item.addEventListener('mouseover', e => {
     //Path for Chrome OR composedPath for Firefox
     var path = e.path ? e.path : e.composedPath();
     path[1].classList.add('active');
+
+    item.parentNode.querySelector('.menu-item-has-children').classList.add('active');
 }));

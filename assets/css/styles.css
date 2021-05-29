@@ -121,7 +121,7 @@ main {
 #clikea-wc-nav-container #clikea-shop-navigation-container .sub-menu {
   display: none;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container {
   display: flex;
@@ -141,11 +141,29 @@ main {
   width: 100vw;
   height: 16rem;
   left: 0;
+  margin-top: 0.0625rem;
   background-color: whitesmoke;
 }
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu {
+  position: absolute;
+  left: 20%;
+  top: 0%;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu .sub-menu {
+  position: absolute;
+  left: 150%;
+  top: 0%;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .menu-item-has-children {
+  position: relative;
+}
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu .menu-item.active > .sub-menu {
-  display: block;
-  color: #ebb400;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu .menu-item-has-children.active > a {
+  border-bottom: 0.125rem solid #ebb400;
 }
 
 .home {

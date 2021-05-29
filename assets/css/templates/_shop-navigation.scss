@@ -17,8 +17,7 @@
 
         a { @include link($black); }
         ul { list-style-type: none; }
-
-        .sub-menu { display: none; font-size: $rem-16; line-height: $rem-24;}
+        .sub-menu { display: none; font-size: $rem-16; line-height: $rem-32;}
 
         #clikea-shop-menu-container {
                 .menu-boutique-container {
@@ -42,14 +41,34 @@
                                                 width: 100vw;
                                                 height: $rem-256;
                                                 left: 0;
+                                                margin-top: $rem-1;
                                                 
                                                 background-color: whitesmoke;
+
+                                                > .menu-item-has-children > .sub-menu {
+                                                                position: absolute;
+                                                                left: 20%;
+                                                                top: 0%;
+
+                                                                .sub-menu {
+                                                                        position: absolute;
+                                                                        left: 150%;
+                                                                        top: 0%;
+                                                                }
+                                                }
+
+                                                .menu-item-has-children { position: relative; }
                                         }
                                 }
 
                                 .menu-item.active > .sub-menu{
-                                        display: block;
-                                        color: $secondary-color;
+                                        display: flex;
+                                        flex-direction: column;
+                                        z-index: 100;
+                                }
+
+                                .menu-item-has-children.active > a {
+                                        border-bottom: $rem-2 solid $secondary-color;
                                 }
                         }
                 }
