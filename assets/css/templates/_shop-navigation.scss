@@ -45,15 +45,11 @@
                                                 
                                                 background-color: whitesmoke;
                                         }
-
-                                        &:hover > .sub-menu {
-                                                display: block;
-                                        }
                                 }
 
-                                /*.menu-item-has-children a:hover + .sub-menu {
+                                .menu-item.active > .sub-menu{
                                         display: block;
-                                }*/
+                                }
                         }
                 }
         }

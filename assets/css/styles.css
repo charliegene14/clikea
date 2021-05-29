@@ -135,9 +135,6 @@ main {
   width: 100%;
   font-size: 1.75rem;
   justify-content: space-evenly;
-  /*.menu-item-has-children a:hover + .sub-menu {
-          display: block;
-  }*/
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu {
   position: absolute;
@@ -146,7 +143,7 @@ main {
   left: 0;
   background-color: whitesmoke;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children:hover > .sub-menu {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu .menu-item.active > .sub-menu {
   display: block;
 }
 

@@ -18,7 +18,10 @@ function clikea_theme_supports() {
 function clikea_register_styles() {
 
     wp_register_style   ('clikea',  '/wp-content/themes/clikea/style.css');
+    wp_register_script  ('clikea-scripts', '/wp-content/themes/clikea/assets/js/shop-navigation.js', 0, 0, true);
+
     wp_enqueue_style    ('clikea');
+    wp_enqueue_script   ('clikea-scripts');
 }
 
 /**
