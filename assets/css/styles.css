@@ -137,25 +137,25 @@ main {
   justify-content: space-evenly;
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu {
+  /*> .menu-item {
+          left: 15vw;
+          .sub-menu {
+                  left: 15vw;
+          }
+  }*/
   position: absolute;
   width: 100vw;
-  height: 16rem;
   left: 0;
   margin-top: 0.0625rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: whitesmoke;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu {
-  position: absolute;
-  left: 20%;
-  top: 0%;
-}
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu .sub-menu {
-  position: absolute;
-  left: 150%;
-  top: 0%;
-}
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .menu-item-has-children {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .menu-item {
   position: relative;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .sub-menu {
+  position: absolute;
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu .menu-item.active > .sub-menu {
   display: flex;

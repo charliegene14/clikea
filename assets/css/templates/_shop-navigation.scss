@@ -25,7 +25,6 @@
                         width: 50vw;
                         height: 100%;
                         padding: $rem-8;
-
                         align-items: flex-end;
 
                         .menu {
@@ -37,27 +36,29 @@
 
                                 > .menu-item-has-children {
                                         > .sub-menu {
-                                                position: absolute;
-                                                width: 100vw;
-                                                height: $rem-256;
-                                                left: 0;
-                                                margin-top: $rem-1;
-                                                
-                                                background-color: whitesmoke;
 
-                                                > .menu-item-has-children > .sub-menu {
-                                                                position: absolute;
-                                                                left: 20%;
-                                                                top: 0%;
-
-                                                                .sub-menu {
-                                                                        position: absolute;
-                                                                        left: 150%;
-                                                                        top: 0%;
-                                                                }
+                                                .menu-item { position: relative; }
+                                                .sub-menu {
+                                                        position: absolute;
                                                 }
 
-                                                .menu-item-has-children { position: relative; }
+                                                /*> .menu-item {
+                                                        left: 15vw;
+                                                        .sub-menu {
+                                                                left: 15vw;
+                                                        }
+                                                }*/
+
+
+                                                position: absolute;
+                                                width: 100vw;
+                                                left: 0;
+
+                                                margin-top: $rem-1;
+                                                padding-top: $rem-64;
+                                                padding-bottom: $rem-64;
+                                                
+                                                background-color: whitesmoke;
                                         }
                                 }
 
