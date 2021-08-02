@@ -42,14 +42,6 @@
                                                         position: absolute;
                                                 }
 
-                                                /*> .menu-item {
-                                                        left: 15vw;
-                                                        .sub-menu {
-                                                                left: 15vw;
-                                                        }
-                                                }*/
-
-
                                                 position: absolute;
                                                 width: 100vw;
                                                 left: 0;
@@ -58,7 +50,7 @@
                                                 padding-top: $rem-64;
                                                 padding-bottom: $rem-64;
                                                 
-                                                background-color: whitesmoke;
+                                                background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(240,240,240,1) 50%, rgba(245,245,245,1) 100%);
                                         }
                                 }
 

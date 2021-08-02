@@ -137,19 +137,13 @@ main {
   justify-content: space-evenly;
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu {
-  /*> .menu-item {
-          left: 15vw;
-          .sub-menu {
-                  left: 15vw;
-          }
-  }*/
   position: absolute;
   width: 100vw;
   left: 0;
   margin-top: 0.0625rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-color: whitesmoke;
+  background: linear-gradient(0deg, #ebebeb 0%, #f0f0f0 50%, whitesmoke 100%);
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .menu-item {
   position: relative;
