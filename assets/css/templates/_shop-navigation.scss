@@ -17,7 +17,7 @@
 
         a { @include link($black); }
         ul { list-style-type: none; }
-        .sub-menu { display: none; font-size: $rem-16; line-height: $rem-32;}
+        .sub-menu { display: none; font-size: $rem-16; line-height: $rem-24;}
 
         #clikea-shop-menu-container {
                 .menu-boutique-container {
@@ -34,24 +34,28 @@
                                 font-size: $rem-28;
                                 justify-content: space-evenly;
 
-                                > .menu-item-has-children {
-                                        > .sub-menu {
+                                > .menu-item-has-children > .sub-menu  {
+                                        position: absolute;
+                                        width: 100vw;
+                                        left: 0;
 
-                                                .menu-item { position: relative; }
-                                                .sub-menu {
-                                                        position: absolute;
-                                                }
+                                        margin-top: $rem-1;
+                                        padding-top: $rem-32;
+                                        padding-bottom: $rem-32;
+                                        padding-left: $rem-32;
+                                                
+                                        background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(240,240,240,1) 50%, rgba(245,245,245,1) 100%);
 
+                                        .sub-menu {
                                                 position: absolute;
                                                 width: 100vw;
-                                                left: 0;
+                                                left: 20vw;
+                                                top: 0;
 
-                                                margin-top: $rem-1;
-                                                padding-top: $rem-64;
-                                                padding-bottom: $rem-64;
-                                                
-                                                background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(240,240,240,1) 50%, rgba(245,245,245,1) 100%);
+                                                padding-top: $rem-32;
+                                                padding-bottom: $rem-32;
                                         }
+
                                 }
 
                                 .menu-item.active > .sub-menu{

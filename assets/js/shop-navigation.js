@@ -1,4 +1,9 @@
 
+/**
+ * Manage CSS .active menus class.
+ * Displaying first big ul.sub-menu and all others sub-menu.
+ * Remove .active class when display sub-menu in the same stage.
+ */
 var menuItem = document.querySelectorAll ('#clikea-shop-navigation-container .menu-item a');
 
 menuItem.forEach(item => item.addEventListener('mouseover', e => {
@@ -13,6 +18,10 @@ menuItem.forEach(item => item.addEventListener('mouseover', e => {
     }
 }));
 
+/**
+ * Remove first big ul.sub-menu according to its size.
+ * When the mouse out of the field.
+ */
 var subMenuWindowed = document.querySelectorAll('#clikea-shop-navigation-container .menu > .menu-item > .sub-menu');
 
 document.body.addEventListener('mousemove', e => {
@@ -20,5 +29,5 @@ document.body.addEventListener('mousemove', e => {
         if(e.clientY > sub.clientHeight + sub.getBoundingClientRect().top) {
             sub.parentNode.classList.remove('active');
         }
-    })
-})
+    });
+});
