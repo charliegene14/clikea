@@ -128,7 +128,7 @@ function clikea_cart_wc_widget(){
     <div id="clikea-widget-cart-container" class="clikea-widget-cart-container">
         <img src='/wp-content/themes/clikea/assets/img/cart-icon.svg' alt='cart' />
         <div id="mini-cart">
-            <?php woocommerce_mini_cart(); ?>
+            <?php the_widget('WC_Widget_Cart', 'title='); ?>
         </div>
     </div>
     <?php

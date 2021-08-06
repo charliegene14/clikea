@@ -89,6 +89,7 @@ main {
   width: 100vw;
   height: 4rem;
   background: whitesmoke;
+  box-shadow: #cacaca 0.125rem 0.125rem 0.5rem;
   -webkit-animation: appears 1.5s ease-out;
           animation: appears 1.5s ease-out;
 }
@@ -139,11 +140,12 @@ main {
   position: absolute;
   width: 100vw;
   left: 0;
-  margin-top: 0.0625rem;
+  margin-top: 0.75rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 2rem;
   background: linear-gradient(0deg, #ebebeb 0%, #f0f0f0 50%, whitesmoke 100%);
+  box-shadow: #cacaca 0.125rem 0.125rem 0.25rem;
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .sub-menu {
   position: absolute;

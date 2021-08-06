@@ -5,6 +5,8 @@
     height: $rem-64;
 
     background: whitesmoke;
+    box-shadow: rgb(202, 202, 202) $rem-2 $rem-2 $rem-8;
+
     animation: appears 1.5s ease-out;
     @keyframes appears {
             from {
