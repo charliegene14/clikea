@@ -1,0 +1,80 @@
+#clikea-shop-navigation-right-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+
+    #clikea-user-menu-container {
+        align-self: center;
+        padding-right: $rem-16;
+        padding-left: $rem-16;
+
+        img {
+            position: relative;
+            width: $rem-32;
+            height: $rem-32;
+            cursor: pointer;
+        }
+
+        #user {
+            display: none;
+            position: absolute;
+            right: 0;
+            margin-right: $rem-16;
+            padding-top: $rem-8;
+            padding: $rem-16;
+            background-color: whitesmoke;
+            box-shadow: grey $rem-2 $rem-2 $rem-8;
+            border-radius: $rem-4;
+        }
+
+        &:hover {
+            #user { display: block; z-index: 101; }
+            
+        }
+    }
+
+    #clikea-widget-cart-container {
+        align-self: center;
+        padding-left: $rem-16;
+
+        img {
+            position: relative;
+            width: $rem-32;
+            height: $rem-32;
+            cursor: pointer;
+        }
+
+        #mini-cart {
+            display: none;
+            position: absolute;
+            right: 0;
+            margin-right: $rem-16;
+            padding-top: $rem-8;
+            padding: $rem-16;
+            background-color: whitesmoke;
+            box-shadow: grey $rem-2 $rem-2 $rem-8;
+            border-radius: $rem-4;
+        }
+
+        &:hover {
+            #mini-cart { display: block; z-index: 101; }
+        }
+    }
+
+    #clikea-widget-search-container {
+        display: flex;
+        .woocommerce-product-search {
+                align-self: center;
+        }
+
+        button {
+                background: url('/wp-content/themes/clikea/assets/img/search-icon.svg');
+                background-size: cover;
+                width: $rem-24;
+                height: $rem-24;
+                border: none;
+                cursor: pointer;
+
+        }
+    }
+}

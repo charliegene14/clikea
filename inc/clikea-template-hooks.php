@@ -15,7 +15,8 @@ add_action('clikea-navigation', 'clikea_main_nav_content');
 add_action('clikea-navigation', 'clikea_main_nav_wrap_end');
 
 add_action('clikea-navigation', 'clikea_shop_nav_wrap_start');
-add_action('clikea-navigation', 'clikea_shop_nav_content');
+add_action('clikea-navigation', 'clikea_shop_nav_left');
+add_action('clikea-navigation', 'clikea_shop_nav_right');
 add_action('clikea-navigation', 'clikea_shop_nav_wrap_end');
 
 add_action('clikea-navigation', 'clikea_nav_wrap_end');

@@ -1,10 +1,11 @@
 
 /**
+ * Left shop navigation.
  * Manage CSS .active menus class.
  * Displaying first big ul.sub-menu and all others sub-menu.
  * Remove .active class when display sub-menu in the same stage.
  */
-var menuItem = document.querySelectorAll ('#clikea-shop-navigation-container .menu-item a');
+var menuItem = document.querySelectorAll ('#clikea-shop-navigation-left-container .menu-item a');
 
 menuItem.forEach(item => item.addEventListener('mouseover', e => {
     item.parentNode.parentNode.querySelectorAll('li').forEach(li => li.classList.remove('active'));
@@ -19,10 +20,11 @@ menuItem.forEach(item => item.addEventListener('mouseover', e => {
 }));
 
 /**
+ * Left shop navigation.
  * Remove first big ul.sub-menu according to its size.
- * When the mouse out of the field.
+ * When the mouse get out of the field.
  */
-var subMenuWindowed = document.querySelectorAll('#clikea-shop-navigation-container .menu > .menu-item > .sub-menu');
+var subMenuWindowed = document.querySelectorAll('#clikea-shop-navigation-left-container .menu > .menu-item > .sub-menu');
 
 document.body.addEventListener('mousemove', e => {
     subMenuWindowed.forEach(function(sub) {

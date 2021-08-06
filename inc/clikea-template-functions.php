@@ -1,41 +1,38 @@
 <?php
 
-/**
- * Shop Navigation start wrapper
- */
 function clikea_shop_nav_wrap_start() {
     if (is_woocommerce()):
-    ?>
-        <div id="clikea-shop-navigation-container">
-    <?php
+        ?>
+            <div id="clikea-shop-navigation-container">
+        <?php
     endif;
 }
 
-/**
- * Content of shop navigation
- */
-function clikea_shop_nav_content() {
+function clikea_shop_nav_left() {
     if (is_woocommerce()):
 
+    ?><div id="clikea-shop-navigation-left-container"><?php
     clikea_shop_menu();
+    ?></div><?php
+
+    endif;
+}
+
+function clikea_shop_nav_right() {
+    if (is_woocommerce()):
+    ?><div id="clikea-shop-navigation-right-container"><?php
     clikea_search_wc_widget();
     clikea_cart_wc_widget();
     clikea_user_menu();
-
-    ?>
-
-    <?php
+    ?></div><?php
     endif;
 }
 
-/**
- * Shop Navigation end wrapper
- */
 function clikea_shop_nav_wrap_end() {
     if (is_woocommerce()):
-    ?>
-        </div>
-    <?php
+        ?>
+            </div>
+        <?php
     endif;
 }
 
@@ -116,7 +113,7 @@ function clikea_nav_wrap_end(){
 function clikea_search_wc_widget(){
     ?>
     <div id="clikea-widget-search-container" class="clikea-widget-search-container">
-        <?php get_product_search_form() ?>
+        <?php get_product_search_form(); ?>
     </div>
     <?php
 }
@@ -129,7 +126,10 @@ function clikea_search_wc_widget(){
 function clikea_cart_wc_widget(){
     ?>
     <div id="clikea-widget-cart-container" class="clikea-widget-cart-container">
-        <?php the_widget('WC_Widget_Cart', 'title=') ?>
+        <img src='/wp-content/themes/clikea/assets/img/cart-icon.svg' alt='cart' />
+        <div id="mini-cart">
+            <?php woocommerce_mini_cart(); ?>
+        </div>
     </div>
     <?php
 }
@@ -157,7 +157,10 @@ function clikea_shop_menu(){
 function clikea_user_menu() {
     ?>
     <nav id="clikea-user-menu-container" class="clikea-user-menu-container">
-        <?php wp_nav_menu(array('theme_location' => is_user_logged_in() ? 'user-connected-menu' : 'user-disconnected-menu')); ?>
+        <img src='/wp-content/themes/clikea/assets/img/user-icon.svg' alt='user' />
+        <div id="user">
+            <?php wp_nav_menu(array('theme_location' => is_user_logged_in() ? 'user-connected-menu' : 'user-disconnected-menu')); ?>
+        </div>
     </nav>
     <?php
 }
