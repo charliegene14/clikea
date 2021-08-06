@@ -18,10 +18,9 @@ function clikea_shop_nav_content() {
     if (is_woocommerce()):
 
     clikea_shop_menu();
-
-    /*clikea_search_wc_widget();
+    clikea_search_wc_widget();
     clikea_cart_wc_widget();
-    clikea_user_menu();*/
+    clikea_user_menu();
 
     ?>
 
@@ -66,11 +65,11 @@ function clikea_main_nav_content() {
     ?>
 
     <nav class="clikea-navigation">
-        <?php wp_nav_menu(array('menu' => 'Navigation gauche')); ?>
+        <?php wp_nav_menu(array('theme_location' => 'left-main-menu')); ?>
         <a class="clikea-navigation-logo" href="/">
             <img src="/wp-content/themes/clikea/assets/img/logo.svg" alt="logo">
         </a>
-        <?php wp_nav_menu(array('menu' => 'Navigation droite')); ?>
+        <?php wp_nav_menu(array('theme_location' => 'right-main-menu')); ?>
     </nav>
 
     <?php
@@ -117,7 +116,7 @@ function clikea_nav_wrap_end(){
 function clikea_search_wc_widget(){
     ?>
     <div id="clikea-widget-search-container" class="clikea-widget-search-container">
-        <?php the_widget('WC_Widget_Product_Search', 'title=') ?>
+        <?php get_product_search_form() ?>
     </div>
     <?php
 }
@@ -144,7 +143,7 @@ function clikea_cart_wc_widget(){
 function clikea_shop_menu(){
     ?>
     <nav id="clikea-shop-menu-container" class="clikea-shop-menu-container">
-        <?php wp_nav_menu(array('menu' => 'Boutique')); ?>
+        <?php wp_nav_menu(array('theme_location' => 'shop-menu')); ?>
     </nav>
     <?php
 }
@@ -158,7 +157,7 @@ function clikea_shop_menu(){
 function clikea_user_menu() {
     ?>
     <nav id="clikea-user-menu-container" class="clikea-user-menu-container">
-        <?php wp_nav_menu(array('menu' => is_user_logged_in() ? 'Utilisateur connecté' : 'Utilisateur déconnecté')); ?>
+        <?php wp_nav_menu(array('theme_location' => is_user_logged_in() ? 'user-connected-menu' : 'user-disconnected-menu')); ?>
     </nav>
     <?php
 }

@@ -19,6 +19,24 @@
         ul { list-style-type: none; }
         .sub-menu { display: none; font-size: $rem-16; line-height: $rem-24;}
 
+        #clikea-widget-search-container {
+                display: flex;
+
+                .woocommerce-product-search {
+                        align-self: center;
+                }
+
+                button {
+                        background: url('/wp-content/themes/clikea/assets/img/search-icon.svg');
+                        background-size: cover;
+                        width: $rem-24;
+                        height: $rem-24;
+                        border: none;
+                        cursor: pointer;
+
+                }
+        }
+
         #clikea-shop-menu-container {
                 .menu-boutique-container {
                         display: flex;

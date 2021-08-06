@@ -13,6 +13,21 @@ function clikea_theme_supports() {
 }
 
 /**
+ * Register theme menus
+ */
+function clikea_register_menus() {
+    register_nav_menus(
+        array(
+            'shop-menu' => __('Shop Navigation'),
+            'left-main-menu' => __('Left Main Navigation'),
+            'right-main-menu' => __('Right Main Navigation'),
+            'user-connected-menu' => __('Connected User Navigation'),
+            'user-disconnected-menu' => __('Disconnected User Navigation'),
+        )
+    );
+}
+
+/**
  * Register Styles
  */
 function clikea_register_styles() {
@@ -25,7 +40,7 @@ function clikea_register_styles() {
 }
 
 /**
- * Allowing WebP images uploads
+ * Allow WebP images uploads
  */
 function webp_upload_mimes($existing_mimes) {
 

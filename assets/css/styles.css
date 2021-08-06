@@ -123,6 +123,20 @@ main {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-widget-search-container {
+  display: flex;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-widget-search-container .woocommerce-product-search {
+  align-self: center;
+}
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-widget-search-container button {
+  background: url("/wp-content/themes/clikea/assets/img/search-icon.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-menu-container .menu-boutique-container {
   display: flex;
   width: 50vw;
