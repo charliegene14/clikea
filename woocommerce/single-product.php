@@ -13,7 +13,6 @@ get_header(); ?>
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
-		the_widget('WC_Widget_Product_Search', 'title=');
 	?>
 
 		<?php while ( have_posts() ) : ?>

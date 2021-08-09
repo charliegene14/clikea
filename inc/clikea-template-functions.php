@@ -1,7 +1,7 @@
 <?php
 
 function clikea_shop_nav_wrap_start() {
-    if (is_woocommerce()):
+    if (!is_front_page()):
         ?>
             <div id="clikea-shop-navigation-container">
         <?php
@@ -9,7 +9,7 @@ function clikea_shop_nav_wrap_start() {
 }
 
 function clikea_shop_nav_left() {
-    if (is_woocommerce()):
+    if (!is_front_page()):
 
     ?><div id="clikea-shop-navigation-left-container"><?php
     clikea_shop_menu();
@@ -19,7 +19,7 @@ function clikea_shop_nav_left() {
 }
 
 function clikea_shop_nav_right() {
-    if (is_woocommerce()):
+    if (!is_front_page()):
     ?><div id="clikea-shop-navigation-right-container"><?php
     clikea_search_wc_widget();
     clikea_cart_wc_widget();
@@ -29,7 +29,7 @@ function clikea_shop_nav_right() {
 }
 
 function clikea_shop_nav_wrap_end() {
-    if (is_woocommerce()):
+    if (!is_front_page()):
         ?>
             </div>
         <?php
@@ -88,10 +88,8 @@ function clikea_main_nav_wrap_end(){
 function clikea_nav_wrap_start(){
     if(is_front_page()):
         ?> <header id="clikea-front-nav-container"> <?php
-    elseif (is_woocommerce()):
-        ?> <header id="clikea-wc-nav-container"> <?php
     else:
-        ?> <header id="clikea-normal-nav-container"> <?php
+        ?> <header id="clikea-wc-nav-container"> <?php
     endif;
 }
 
@@ -173,6 +171,14 @@ function badge_new_product() {
     $newness_days = 30;
     $created = strtotime( $product->get_date_created() );
     if ( ( time() - ( 60 * 60 * 24 * $newness_days ) ) < $created ) {
-       echo '<span class="new-product">' . esc_html__( 'New!', 'woocommerce' ) . '</span>';
+       echo '<span class="badge-new-product">' . esc_html__( 'New !', 'woocommerce' ) . '</span>';
+    }
+}
+
+function badge_out_of_stock() {
+    global $product;
+    $status = $product->get_stock_status();
+    if ($status == 'outofstock') {
+        echo '<span class="badge-out-stock">' .esc_html__( 'Rupture de stock', 'woocommerce' ). '</span>';
     }
 }

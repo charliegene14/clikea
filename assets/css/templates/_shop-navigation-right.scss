@@ -67,14 +67,6 @@
                 align-self: center;
         }
 
-        button {
-                background: url('/wp-content/themes/clikea/assets/img/search-icon.svg');
-                background-size: cover;
-                width: $rem-24;
-                height: $rem-24;
-                border: none;
-                cursor: pointer;
-
-        }
+        @include searchform($rem-256, $rem-32, $rem-24, $rem-24);
     }
 }

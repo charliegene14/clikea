@@ -1,0 +1,15 @@
+@mixin searchform($width, $height, $btn-width, $btn-height) {
+    input {
+        width: $width;
+        height: $height;
+    }
+    button {
+        background: url('/wp-content/themes/clikea/assets/img/search-icon.svg');
+        background-size: cover;
+        width: $btn-width;
+        height: $btn-height;
+        border: none;
+        cursor: pointer;
+
+    }
+}

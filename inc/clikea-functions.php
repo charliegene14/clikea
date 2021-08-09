@@ -7,7 +7,16 @@ function clikea_theme_supports() {
 
     add_theme_support   ('title-tag');
     add_theme_support   ('menus');
-    add_theme_support   ('woocommerce');
+    add_theme_support   ('woocommerce', array(
+        'product_grid' => array(
+            'default_rows'    => 2,
+            'min_rows'        => 1,
+            'max_rows'        => 4,
+            'default_columns' => 2,
+            'min_columns'     => 1,
+            'max_columns'     => 4,
+        ),
+    ) );
     add_theme_support   ('widgets');
     add_theme_support   ('wc-product-gallery-slider');
 }

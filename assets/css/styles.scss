@@ -2,11 +2,13 @@
             'var/fonts',
             'var/colors';
 
-@import     'mixins/button',
-            'mixins/link';
+@import     'mixins/buttons',
+            'mixins/link',
+            'mixins/searchform';
 
 
 @import     'class/all';
 
 @import     'templates/wp-header',
-            'templates/front-page';
+            'templates/front-page',
+            'templates/grid_products';

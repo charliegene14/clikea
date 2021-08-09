@@ -29,7 +29,6 @@ get_header( 'shop' );
  */
 
 do_action( 'woocommerce_before_main_content' );
-the_widget('WC_Widget_Product_Search', 'title=')
 
 ?>
 <header class="woocommerce-products-header">
