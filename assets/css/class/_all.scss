@@ -5,12 +5,16 @@
     font-family: $poppins-400;
 }
 
-main {
+#primary main, main {
     position: relative;
     top: $rem-128;
+}
+
+main {
 
     margin-right: $rem-64;
     margin-left: $rem-64;
+    margin-bottom: $rem-16;
 
     .woocommerce-products-header {
         text-align: center;
@@ -20,4 +24,10 @@ main {
         text-align: center;
         margin-bottom: $rem-16;
     }
+}
+
+footer {
+    position: relative;
+    top: $rem-128;
+    margin-top: $rem-16;
 }

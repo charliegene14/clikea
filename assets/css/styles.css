@@ -6,11 +6,15 @@
   font-family: "Poppins", sans-serif;
 }
 
-main {
+#primary main, main {
   position: relative;
   top: 8rem;
+}
+
+main {
   margin-right: 4rem;
   margin-left: 4rem;
+  margin-bottom: 1rem;
 }
 main .woocommerce-products-header {
   text-align: center;
@@ -18,6 +22,12 @@ main .woocommerce-products-header {
 main h1 {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+footer {
+  position: relative;
+  top: 8rem;
+  margin-top: 1rem;
 }
 
 #clikea-normal-nav-container, #clikea-wc-nav-container, #clikea-front-nav-container {
@@ -316,4 +326,14 @@ main h1 {
   left: 1rem;
   font-weight: bold;
   color: #c80000;
+}
+
+#clikea-footer-container {
+  display: flex;
+  min-height: 8rem;
+  background-color: whitesmoke;
+}
+#clikea-footer-container p {
+  margin: auto;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
