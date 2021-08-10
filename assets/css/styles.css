@@ -328,6 +328,14 @@ footer {
   color: #c80000;
 }
 
+.woocommerce-pagination a {
+  color: #201e25;
+  text-decoration: none;
+}
+.woocommerce-pagination a:hover {
+  color: #ebb400;
+}
+
 #clikea-footer-container {
   display: flex;
   min-height: 8rem;
