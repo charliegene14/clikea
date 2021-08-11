@@ -31,3 +31,11 @@ footer {
     top: $rem-128;
     margin-top: $rem-16;
 }
+
+.star-rating:before,
+.star-rating span:before {
+  font-family: 'Font Awesome 5 Free'!important;
+  font-weight: 900!important;
+  color: $secondary-color;
+  content: "\f005\f005\f005\f005\f005" !important;
+}

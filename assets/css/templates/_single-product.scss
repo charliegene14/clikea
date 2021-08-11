@@ -1,0 +1,36 @@
+div.product {
+
+    .woocommerce-product-gallery {
+        width: 30vw!important;
+        float: right!important;
+    }
+
+    .summary {
+        width: 50vw!important;
+        float: left!important;
+
+        h1.product_title {text-align: left; color: $black;}
+        div.woocommerce-product-rating { a{@include link($secondary-color)}}
+        .price {font-weight: bold;}
+        .cart .single_add_to_cart_button {
+            background-color: $secondary-color!important;
+        }
+
+        div.product_meta {
+            margin-top: $rem-64;
+            font-size: $rem-12;
+
+            span {display: block;}
+            a {@include link($secondary-color)}
+        }
+    }
+
+    .woocommerce-tabs {
+        padding: $rem-32;
+        margin-top: $rem-32;
+        margin-bottom: $rem-32;
+        border-radius: $rem-6;
+        box-shadow: $rem-2 $rem-2 $rem-10 rgb(180, 180, 180);
+        a {@include link($secondary-color)}
+    }
+}
