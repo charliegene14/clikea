@@ -182,3 +182,15 @@ function badge_out_of_stock() {
         echo '<span class="badge-out-stock">' .esc_html__( 'Rupture de stock', 'woocommerce' ). '</span>';
     }
 }
+
+function clikea_wc_shop_loop_subcategory_title( $category ) {
+    ?>
+    <div class="clikea-category-title-background">
+        <h2 class="woocommerce-loop-category__title">
+            <?php
+            echo esc_html( $category->name );
+            ?>
+        </h2>
+    </div>
+    <?php
+}

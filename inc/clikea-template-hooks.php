@@ -4,6 +4,7 @@
  */
 add_action('woocommerce_before_shop_loop_item_title',   'badge_new_product');
 add_action('woocommerce_before_shop_loop_item_title',   'badge_out_of_stock');
+add_action('clikea_wc_shop_loop_subcategory_title',     'clikea_wc_shop_loop_subcategory_title');
 
 /**
  * Clikea Navigation Template
