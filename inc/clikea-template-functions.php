@@ -122,12 +122,20 @@ function clikea_search_wc_widget(){
  * .clikea-widget-cart-container
  */
 function clikea_cart_wc_widget(){
+
+    global $woocommerce; 
+
     ?>
     <div id="clikea-widget-cart-container" class="clikea-widget-cart-container">
-        <img src='/wp-content/themes/clikea/assets/img/cart-icon.svg' alt='cart' />
-        <div id="mini-cart">
-            <?php the_widget('WC_Widget_Cart', 'title='); ?>
-        </div>
+        <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
+            <img src='/wp-content/themes/clikea/assets/img/cart-icon.svg' alt='cart' />
+        </a>
+
+        <?php if (!is_cart()): ?>
+            <div id="mini-cart">
+                <?php the_widget('WC_Widget_Cart', 'title='); ?>
+            </div>
+        <?php endif; ?>
     </div>
     <?php
 }
@@ -155,7 +163,9 @@ function clikea_shop_menu(){
 function clikea_user_menu() {
     ?>
     <nav id="clikea-user-menu-container" class="clikea-user-menu-container">
-        <img src='/wp-content/themes/clikea/assets/img/user-icon.svg' alt='user' />
+        <a href="<?php echo get_permalink(get_option( 'woocommerce_myaccount_page_id' )); ?>">
+            <img src='/wp-content/themes/clikea/assets/img/user-icon.svg' alt='user' />
+        </a>
         <div id="user">
             <?php wp_nav_menu(array('theme_location' => is_user_logged_in() ? 'user-connected-menu' : 'user-disconnected-menu')); ?>
         </div>

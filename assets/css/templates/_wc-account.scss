@@ -1,0 +1,39 @@
+nav.woocommerce-MyAccount-navigation {
+
+    background-color: whitesmoke;
+    border-radius: $rem-4;
+    box-shadow: $rem-2 $rem-2 $rem-10 rgb(180, 180, 180);
+    list-style-position: inside;
+    padding-top: $rem-32;
+    padding-bottom: $rem-32;
+
+    a { @include link($black); }
+    ul li::marker {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            content: "\f105";
+    }
+
+    li {
+        padding-left: $rem-16;
+
+        &:hover::marker {
+            content: "\f101";
+        }
+
+        &:hover {
+            padding-left: $rem-8;
+        }
+    }
+}
+
+div.woocommerce-MyAccount-content, div#customer_login {
+    a {@include link(darken($secondary-color, 7%));}
+}
+
+form.woocommerce-form-register, form.woocommerce-form-login {
+    border: none!important;
+    border-radius: $rem-4!important;
+    box-shadow: $rem-2 $rem-2 $rem-10 rgb(180, 180, 180);
+    background-color: whitesmoke;
+}

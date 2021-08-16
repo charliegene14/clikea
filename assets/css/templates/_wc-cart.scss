@@ -1,0 +1,33 @@
+.wp-block-woocommerce-cart {
+    a {@include link($black);}
+}
+
+.wc-block-cart__main, .wc-block-checkout__main {
+    padding-top: $rem-16;
+}
+
+.wc-block-cart__sidebar, .wc-block-checkout__sidebar {
+    border-radius: $rem-4;
+    box-shadow: $rem-2 $rem-2 $rem-10 rgb(180, 180, 180);
+    background-color: whitesmoke;
+    padding-top: $rem-16;
+    padding-right: $rem-32;
+}
+
+.wc-block-checkout.is-large:not(.wc-block-skeleton) {display: inline-block;}
+.wc-block-checkout__sidebar:not(.wc-block-skeleton) {float: right;}
+.wc-block-checkout__main:not(.wc-block-skeleton) {float: left;}
+
+.wc-block-components-button {
+    background-image: linear-gradient(18deg, rgba(255,196,0,1) 0%, rgba(255,179,0,1) 30%, rgba(255,149,0,1) 100%)!important;
+    color: $black!important;
+    border: none;
+    cursor: pointer;
+}
+
+.add_to_cart_button {
+    background-color: #ebe9eb!important;
+    border-radius: 3px!important;
+    color: #515151!important;
+    &:hover {background-color: #dfdbdf!important;}
+}
