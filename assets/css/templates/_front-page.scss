@@ -1,10 +1,8 @@
 .home {
    height: 100vh;
-   
-   background: url('/collection\ 2021.webp') no-repeat;
-   background-size: cover;
-   background-position-y: bottom;
-   background-position-x: center;
+   background-size: cover!important;
+   background-position-y: bottom!important;
+   background-position-x: center!important;
 
    #background-gradient {
       position: fixed;

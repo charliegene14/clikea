@@ -267,10 +267,9 @@ footer {
 
 .home {
   height: 100vh;
-  background: url("/collection 2021.webp") no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-  background-position-x: center;
+  background-size: cover !important;
+  background-position-y: bottom !important;
+  background-position-x: center !important;
 }
 .home #background-gradient {
   position: fixed;
@@ -305,6 +304,11 @@ footer {
 }
 .home .btn-home-collection #btn-text {
   font-size: 1.6vw;
+}
+
+.product-category-thumbnail {
+  width: 32rem;
+  height: 32rem;
 }
 
 .products {
