@@ -151,19 +151,19 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container {
   display: flex;
   width: 50vw;
   height: 100%;
   padding: 0.5rem;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container .menu {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu {
   display: flex;
   width: 100%;
   font-size: 1.75rem;
   justify-content: space-evenly;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu > .menu-item-has-children > .sub-menu {
   position: absolute;
   width: 100vw;
   left: 0;
@@ -174,7 +174,7 @@ footer {
   background: linear-gradient(0deg, #ebebeb 0%, #f0f0f0 50%, whitesmoke 100%);
   box-shadow: #cacaca 0.125rem 0.125rem 0.25rem;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container .menu > .menu-item-has-children > .sub-menu .sub-menu {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu > .menu-item-has-children > .sub-menu .sub-menu {
   position: absolute;
   width: 100vw;
   left: 20vw;
@@ -182,12 +182,12 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container .menu .menu-item.active > .sub-menu {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu .menu-item.active > .sub-menu {
   display: flex;
   flex-direction: column;
   z-index: 100;
 }
-#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu-boutique-container .menu .menu-item-has-children.active > a {
+#clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-left-container #clikea-shop-menu-container .menu .menu-item-has-children.active > a {
   border-bottom: 0.125rem solid #ebb400;
 }
 #clikea-wc-nav-container #clikea-shop-navigation-container #clikea-shop-navigation-right-container {

@@ -66,6 +66,10 @@ function home_page_menu_render() {
                                 <input type="hidden" id="clikea_home_background" name="clikea_home_background" value="<?= get_option('clikea_home_background') ?>">
                                 <button type="button" class="upload_image_button button">Téléverser/Ajouter image</button>
                                 <button type="button" class="remove_image_button button">Supprimer image</button>
+                                
+                                <?php if (!class_exists('WooCommerce')): ?>
+                                <p><i>This can't works without WooCommerce activated !</i></p>
+                                <?php endif; ?>
                             </div>
 
                 <script type="text/javascript">

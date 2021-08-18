@@ -12,7 +12,7 @@ function clikea_shop_nav_left() {
     if (!is_front_page()):
 
     ?><div id="clikea-shop-navigation-left-container"><?php
-    clikea_shop_menu();
+        clikea_shop_menu();
     ?></div><?php
 
     endif;
@@ -21,8 +21,13 @@ function clikea_shop_nav_left() {
 function clikea_shop_nav_right() {
     if (!is_front_page()):
     ?><div id="clikea-shop-navigation-right-container"><?php
-    clikea_search_wc_widget();
-    clikea_cart_wc_widget();
+
+        if ( class_exists( 'WooCommerce' ) ) {
+            clikea_search_wc_widget();
+            clikea_cart_wc_widget();
+        } else {
+            echo '<i style="color: red; font-size: 14px; margin: auto;">S\'il vous plaît, activez WooCommerce pour profiter de ce thème !</i>';
+        }
     clikea_user_menu();
     ?></div><?php
     endif;
@@ -62,14 +67,59 @@ function clikea_main_nav_content() {
     ?>
 
     <nav class="clikea-navigation">
-        <?php wp_nav_menu(array('theme_location' => 'left-main-menu')); ?>
+
+        <div class="menu-navigation-gauche-container">
+        <?php
+            wp_nav_menu(array(
+                'theme_location'    => 'left-main-menu',
+                'container'         => NULL,
+                'fallback_cb'       => function (){          
+                    ?>
+                    <ul class="menu">
+                        <li><a href="/">Accueil</a></li>
+                    </ul>
+                    <?php
+            }));
+        ?>
+        </div>
+
         <a class="clikea-navigation-logo" href="/">
             <img src="/wp-content/themes/clikea/assets/img/logo.svg" alt="logo">
         </a>
-        <?php wp_nav_menu(array('theme_location' => 'right-main-menu')); ?>
+
+        <div class="menu-navigation-droite-container">
+            <?php wp_nav_menu(array(
+                'theme_location'    => 'right-main-menu',
+                'container'         => NULL,
+                'fallback_cb'       => 'clikea_default_right_main_menu'
+            ));?>
+        </div>
+
     </nav>
 
     <?php
+}
+
+function clikea_default_right_main_menu() {
+    if (!class_exists('WooCommerce')) {
+        if (get_post_status ( 2 ) == 'publish' || get_post_status ( 2 ) == 'draft'): ?>
+            <ul class="menu">
+                <li><a href="/?page_id=2">Page d'exemple</a></li>
+            </ul>
+        <?php else:
+            ?>
+            <ul class="menu">
+                <li><a href="/">Menu droit</a></li>
+            </ul>
+            <?php
+        endif;
+    } else {
+        ?>
+        <ul class="menu">
+            <li><a href="<?= wc_get_page_permalink( 'shop' ) ?>">Boutique</a></li>
+        </ul>
+        <?php
+    }
 }
 
 /**
@@ -149,7 +199,41 @@ function clikea_cart_wc_widget(){
 function clikea_shop_menu(){
     ?>
     <nav id="clikea-shop-menu-container" class="clikea-shop-menu-container">
-        <?php wp_nav_menu(array('theme_location' => 'shop-menu')); ?>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'shop-menu',
+            'container' => NULL,
+            'fallback_cb' => function () {
+                ?>
+                <ul class="menu">
+                    <li class="menu-item menu-item-has-children"><a href="#">Lien 1</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-has-children"><a href="#">Ce menu sert</a>
+                                <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Voilà un</a></li>
+                                <li class="menu-item"><a href="#">Sous menu...</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">de présentation</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Voilà un autre</a></li>
+                                <li class="menu-item"><a href="#">Sous menu...</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">et d'éxemple.</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Voilà encore un</a></li>
+                                <li class="menu-item"><a href="#">autre Sous menu...</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item "><a href="#">Lien 2</a></li>
+                </ul>
+                <?php
+            }
+        ));
+        ?>
     </nav>
     <?php
 }
@@ -163,11 +247,29 @@ function clikea_shop_menu(){
 function clikea_user_menu() {
     ?>
     <nav id="clikea-user-menu-container" class="clikea-user-menu-container">
-        <a href="<?php echo get_permalink(get_option( 'woocommerce_myaccount_page_id' )); ?>">
+        <a href="<?php echo class_exists( 'WooCommerce' ) ? get_permalink(get_option( 'woocommerce_myaccount_page_id' )) : '/wp-login.php' ; ?>">
             <img src='/wp-content/themes/clikea/assets/img/user-icon.svg' alt='user' />
         </a>
         <div id="user">
-            <?php wp_nav_menu(array('theme_location' => is_user_logged_in() ? 'user-connected-menu' : 'user-disconnected-menu')); ?>
+            <?php
+            if (is_user_logged_in()) {
+                if (wp_get_nav_menu_items('user-connected-menu')) {
+                    wp_nav_menu(array('theme_location' =>'user-connected-menu')); 
+                } else {
+                    ?>
+                    <p>Menu: <br />Utilisateur connecté.</p>
+                    <?php
+                }
+            } else {
+                if (wp_get_nav_menu_items('user-disconnected-menu')) {
+                    wp_nav_menu(array('theme_location' => 'user-disconnected-menu')); 
+                } else {
+                    ?>
+                    <p>Menu: <br />Utilisateur déconnecté.</p>
+                    <?php
+                }
+            }
+            ?>
         </div>
     </nav>
     <?php
