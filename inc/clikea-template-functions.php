@@ -253,21 +253,20 @@ function clikea_user_menu() {
         <div id="user">
             <?php
             if (is_user_logged_in()) {
-                if (wp_get_nav_menu_items('user-connected-menu')) {
-                    wp_nav_menu(array('theme_location' =>'user-connected-menu')); 
-                } else {
-                    ?>
-                    <p>Menu: <br />Utilisateur connecté.</p>
-                    <?php
-                }
+                wp_nav_menu(array(
+                    'theme_location' =>'user-connected-menu',
+                    'fallback_cb' => function () {
+                        ?>
+                        <p>Menu: <br />Utilisateur connecté.</p>
+                        <?php
+                }));
             } else {
-                if (wp_get_nav_menu_items('user-disconnected-menu')) {
-                    wp_nav_menu(array('theme_location' => 'user-disconnected-menu')); 
-                } else {
-                    ?>
-                    <p>Menu: <br />Utilisateur déconnecté.</p>
-                    <?php
-                }
+                wp_nav_menu(array('theme_location' => 'user-disconnected-menu',
+                    'fallback_cb' => function () {
+                        ?>
+                        <p>Menu: <br />Utilisateur déconnecté.</p>
+                        <?php 
+                }));
             }
             ?>
         </div>
