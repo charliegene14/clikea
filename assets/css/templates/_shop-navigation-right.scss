@@ -1,7 +1,14 @@
 #clikea-shop-navigation-right-container {
     display: flex;
     justify-content: flex-end;
-    width: 50vw;
+    
+    @media  screen and (max-width: 660px) {
+        width: 80vw;
+    }
+
+    @media  screen and (min-width: 660px) {
+        width: 50vw;
+    }
 
     #clikea-user-menu-container {
         align-self: center;
@@ -12,6 +19,8 @@
             position: relative;
             width: $rem-32;
             height: $rem-32;
+            min-width: $rem-32;
+            min-height: $rem-32;
             cursor: pointer;
         }
 
@@ -41,6 +50,8 @@
             position: relative;
             width: $rem-32;
             height: $rem-32;
+            min-width: $rem-32;
+            min-height: $rem-32;
             cursor: pointer;
         }
 
@@ -63,10 +74,17 @@
 
     #clikea-widget-search-container {
         display: flex;
+        
         .woocommerce-product-search {
                 align-self: center;
         }
 
-        @include searchform($rem-256, $rem-32, $rem-24, $rem-24);
+        @media  screen and (max-width: 660px) {
+            @include searchform($rem-128, $rem-32, $rem-24, $rem-24);
+        }
+
+        @media  screen and (min-width: 660px) {
+            @include searchform($rem-256, $rem-32, $rem-24, $rem-24);
+        }
     }
 }

@@ -4,50 +4,95 @@
 
         #clikea-shop-menu-container {
                 display: flex;
-                width: 50vw;
                 height: 100%;
                 padding: $rem-8;
 
-                .menu {
-                        display: flex;
-                        width: 100%;
-
-                        font-size: $rem-28;
-                        justify-content: space-evenly;
-
-                        > .menu-item-has-children > .sub-menu  {
+                @media screen and (max-width: 660px) {
+                        width: 20vw;
+                        
+                        .res-left-menu {
                                 position: absolute;
-                                width: 100vw;
-                                left: 0;
+                                margin-left: $rem-8;
+                                width: $rem-32;
+                                height: $rem-32;
+                                align-self: center;
+                                background: url('/wp-content/themes/clikea/assets/img/menu-icon.svg');
+                                cursor: pointer;
+                        }
 
-                                margin-top: $rem-12;
-                                padding-top: $rem-32;
-                                padding-bottom: $rem-32;
-                                padding-left: $rem-32;
-                                                
-                                background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(240,240,240,1) 50%, rgba(245,245,245,1) 100%);
-                                box-shadow: rgb(202, 202, 202) $rem-2 $rem-2 $rem-4;
+                        .menu.mobile-res {
+                                display: none;
+                        }
 
-                                .sub-menu {
+                        .menu.mobile-res.active {
+                                display: block;
+                                position: relative;
+                                top: 100%;
+                                left: - $rem-8;
+
+                                min-width: 100vw;
+                                min-height: 100vh;
+                                overflow: scroll;
+                                background-color: rgba(214, 214, 214, 0.9);
+                                
+
+                                li {margin-left: $rem-16; font-size: $rem-24; line-height: $rem-32;}
+
+                                .menu-item.active > .sub-menu{
+                                        display: block;
+                                }
+        
+                                .menu-item-has-children.active > a {
+                                        border-bottom: $rem-2 solid $secondary-color;
+                                }
+                        }
+                }
+
+                @media  screen and (min-width: 660px) {
+                        width: 50vw;
+
+                        .menu {
+                                display: flex;
+                                width: 100%;
+
+                                font-size: $rem-28;
+                                justify-content: space-evenly;
+
+                                > .menu-item-has-children > .sub-menu  {
                                         position: absolute;
                                         width: 100vw;
-                                        left: 20vw;
-                                        top: 0;
-
+                                        left: 0;
+        
+                                        margin-top: $rem-12;
                                         padding-top: $rem-32;
                                         padding-bottom: $rem-32;
+                                        padding-left: $rem-32;
+                                                        
+                                        background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(240,240,240,1) 50%, rgba(245,245,245,1) 100%);
+                                        box-shadow: rgb(202, 202, 202) $rem-2 $rem-2 $rem-4;
+        
+                                        .sub-menu {
+                                                position: absolute;
+                                                width: 100vw;
+                                                left: 20vw;
+                                                top: 0;
+        
+                                                padding-top: $rem-32;
+                                                padding-bottom: $rem-32;
+                                        }
+                                }
+        
+                                .menu-item.active > .sub-menu{
+                                        display: flex;
+                                        flex-direction: column;
+                                        z-index: 100;
+                                }
+        
+                                .menu-item-has-children.active > a {
+                                        border-bottom: $rem-2 solid $secondary-color;
                                 }
                         }
 
-                        .menu-item.active > .sub-menu{
-                                display: flex;
-                                flex-direction: column;
-                                z-index: 100;
-                        }
-
-                        .menu-item-has-children.active > a {
-                                border-bottom: $rem-2 solid $secondary-color;
-                        }
                 }
         }
 }

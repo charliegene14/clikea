@@ -3,24 +3,30 @@
     position: relative;
     display: flex;
     width: 100vw;
-    height: $rem-32;
+    @media screen and (min-width: 480px) { height: $rem-32; }
     padding: $rem-8;
     z-index: 100;
+    font-size: $rem-16;
 
     .clikea-navigation {
         display: flex;
+        @media screen and (max-width: 480px) { flex-direction: column; }
         width: 100%;
         justify-content: center;
         font-size: $rem-20;
     
-        .menu-navigation-gauche-container,
-        .menu-navigation-droite-container {
-            display: flex;
-            flex-grow: 0.3;
+        @media screen and (min-width: 480px) {
+            .menu-navigation-gauche-container,
+            .menu-navigation-droite-container {
+                display: flex;
+                flex-grow: 0.3;
+            }
         }
+
 
         .clikea-navigation-logo {
             width: $rem-64;
+            @media screen and (max-width: 480px) { position: absolute; }
         }
     }
 
@@ -29,7 +35,7 @@
     }
 
     a {
-        @include link($black);
+       @include link($black);
 
         &:hover {
 

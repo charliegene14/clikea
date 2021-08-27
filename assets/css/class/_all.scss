@@ -5,9 +5,19 @@
     font-family: $poppins-400;
 }
 
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 80%!important;
+    }
+}
+
 #primary main, main {
     position: relative;
     top: $rem-128;
+
+    @media screen and (max-width: 480px) {
+        top: $rem-160;
+    }
 }
 
 main {
